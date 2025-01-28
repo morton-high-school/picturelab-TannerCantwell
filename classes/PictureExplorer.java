@@ -94,7 +94,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
   
   /** the number system to use, 0 means starting at 0, 1 means starting at 1 */
   private int numberBase=0;
-  
+
   /**
    * Public constructor 
    * @param picture the picture to explore
@@ -800,7 +800,7 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    */
   public static void main( String args[])
   {
-    Picture pix = new Picture("beach.jpg");
+    Picture pix = new Picture("poo emoji.jpg");
     pix.explore();
   }
   

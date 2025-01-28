@@ -10,6 +10,54 @@ public class IntArrayWorker
   {
     matrix = theMatrix;
   }
+
+  public int getCount(int search)
+  {
+    int count = 0;
+
+    for (int i = 0; i < matrix.length; i++)
+    {
+      for (int j = 0; j < matrix[i].length; j++)
+      {
+        if (matrix[i][j] == search)
+        {
+          count++;
+        }
+      }
+    }
+
+    return count;
+  }
+
+  public int getLargest()
+  {
+    int largest = matrix[0][0];
+
+    for (int i = 0; i < matrix.length; i++)
+    {
+      for (int j = 0; j < matrix[i].length; j++)
+      {
+        if (matrix[i][j] > largest)
+        {
+          largest = matrix[i][j];
+        }
+      }
+    }
+
+    return largest;
+  }
+
+  public int getColTotal(int colIndex)
+  {
+    int total = 0;
+
+    for (int i = 0; i < matrix.length; i++)
+    {
+      total += matrix[i][colIndex];
+    }
+
+    return total;
+  }
   
   /**
    * Method to return the total 
