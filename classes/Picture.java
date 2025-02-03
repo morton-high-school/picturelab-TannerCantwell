@@ -112,6 +112,53 @@ public class Picture extends SimplePicture
       }
     }
   }
+
+   /** Method to negate */
+   public void negate()
+   {
+     Pixel[][] pixels = this.getPixels2D();
+ 
+     for (int row = 0; row < pixels.length; row++)
+     {
+       for (int pixel = 0; pixel < pixels[row].length; pixel++)
+       {
+        pixels[row][pixel].setRed(255 - pixels[row][pixel].getRed());
+        pixels[row][pixel].setGreen(255 - pixels[row][pixel].getGreen());
+        pixels[row][pixel].setBlue(255 - pixels[row][pixel].getBlue());
+      }
+    }
+  }
+
+    /** Method to negate */
+    public void grayscale()
+    {
+      Pixel[][] pixels = this.getPixels2D();
+  
+      for (int row = 0; row < pixels.length; row++)
+      {
+        for (int pixel = 0; pixel < pixels[row].length; pixel++)
+        {
+          int sum = pixels[row][pixel].getRed() + pixels[row][pixel].getGreen() + pixels[row][pixel].getBlue();
+          pixels[row][pixel].setRed(sum / 3);
+          pixels[row][pixel].setGreen(sum / 3);
+          pixels[row][pixel].setBlue(sum / 3);
+       }
+     }
+   }
+
+   /** Method to negate */
+   public void fixUnderwater()
+   {
+     Pixel[][] pixels = this.getPixels2D();
+ 
+     for (int row = 0; row < pixels.length; row++)
+     {
+       for (int pixel = 0; pixel < pixels[row].length; pixel++)
+       {
+        pixels[row][pixel].setBlue(255 - pixels[row][pixel].getBlue());
+      }
+    }
+  }
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
