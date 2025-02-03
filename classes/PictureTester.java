@@ -38,7 +38,9 @@ public class PictureTester
   /** Method to test grayscale */
   public static void testFixUnderwater()
   {
+    System.out.println("before Picture constructor");
     Picture water = new Picture("water.jpg");
+    System.out.println("after Picture constructor");
     water.explore();
     water.fixUnderwater();
     water.explore();
@@ -61,6 +63,33 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
+
+  /** Method to test mirrorVerticalRightToLeft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorHorizontal */
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+
+   /** Method to test mirrorHorizontalBotToTop */
+   public static void testMirrorHorizontalBotToTop()
+   {
+     Picture caterpillar = new Picture("caterpillar.jpg");
+     caterpillar.explore();
+     caterpillar.mirrorHorizontalBotToTop();
+     caterpillar.explore();
+   }
   
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
@@ -101,7 +130,10 @@ public class PictureTester
     testNegate();
     testGrayscale();
     testFixUnderwater();
-    //testMirrorVertical();
+    testMirrorVertical();
+    testMirrorVerticalRightToLeft();
+    testMirrorHorizontal();
+    testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
