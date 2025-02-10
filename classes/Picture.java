@@ -328,7 +328,7 @@ public class Picture extends SimplePicture
     }
   }
   
-   /** Mirror just part of a picture of a snowman */
+   /** Mirror just part of a picture of a beach */
    public void mirrorGull()
    {
      int mirrorPoint = 276;
